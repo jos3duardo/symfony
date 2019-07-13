@@ -43,7 +43,8 @@ class PostController extends Controller
             $doctrine = $this->getDoctrine()->getManager();
             $doctrine->persist($post);
             $doctrine->flush();
-
+            //mensagem
+            $this->addFlash('success',"Post Criado com sucesso!");
            return $this->redirect('/posts');
 
         }
@@ -71,6 +72,8 @@ class PostController extends Controller
             $doctrine = $this->getDoctrine()->getManager();
             $doctrine->persist($post);
             $doctrine->flush();
+
+            $this->addFlash('success',"Post Editado com sucesso!");
 
             return $this->redirect('/posts');
 
