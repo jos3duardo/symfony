@@ -1,0 +1,12 @@
+<ul>
+    {% for p in posts %}
+    <div class="posts">
+        <h2>{{ p.title }}</h2>
+        <small>Criado em {{ p.createdAt()|date("d/m/Y") }}</small>
+        <p>
+            {{ p.content }}
+        </p>
+    </div>
+    <hr>
+    {% endfor %}
+</ul>
