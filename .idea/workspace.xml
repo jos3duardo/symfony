@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+            <state relative-caret-position="138">
+              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="e#40#61#0#PHP" expanded="true" />
                 <element signature="e#485#501#1#PHP" expanded="true" />
@@ -116,6 +116,11 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Post.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Service/Bold.php" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/posts/posts.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/posts/single.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/posts/create.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/PostController.php" />
       </list>
     </option>
