@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Form\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,6 +32,7 @@ class PostController extends Controller
     public function singleAction($slug)
     {
         $data = ['slug' => $slug];
+
         return $this->render('posts/single.html.twig', $data);
     }
 }
