@@ -18,7 +18,10 @@ class PostController extends Controller
      * @return Response
      */
     public function indexAction(){
-        return new Response("Teste Novo Controller Posts");
+        $posts = $this->getDoctrine()->getRepository("AppBundle:Post")
+                        ->findAll();
+        return $this->render('posts/posts.html.twig',['posts' => $posts]);
+
     }
 
     /**
