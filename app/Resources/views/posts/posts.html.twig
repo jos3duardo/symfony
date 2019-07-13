@@ -7,7 +7,7 @@
         <div>
             {% for p in posts %}
                 <div class="posts">
-                    <h2>{{ p.title }}</h2>
+                    <h2><a href="/posts/edit/{{ p.id }}"> {{ p.title }} </a></h2>
                     <small>Criado em {{ p.createdAt()|date("d/m/Y") }}</small>
                     <p>
                         {{ p.content }}
