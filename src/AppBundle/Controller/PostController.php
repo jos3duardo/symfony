@@ -73,13 +73,27 @@ class PostController extends Controller
             $doctrine->persist($post);
             $doctrine->flush();
 
-            $this->addFlash('success',"Post Editado com sucesso!");
+            $this->addFlash('warning',"Post Editado com sucesso!");
 
             return $this->redirect('/posts');
 
         }
 
         return $this->render('posts/create.html.twig',['form' => $form->createView()]);
+
+    }
+
+    /**
+     * @Route("/remove/{post}")
+     * @param Post $post
+     * @return Response
+     */
+    public function removeAction(Post $post){
+        $this->getDoctrine()->getManager()->remove($post);
+        $this->getDoctrine()->getManager()->flush();
+
+        $this->addFlash("error","Post deletado com sucesso");
+        return $this->redirect('/posts');
 
     }
 

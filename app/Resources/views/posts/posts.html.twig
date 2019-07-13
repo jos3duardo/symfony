@@ -1,8 +1,9 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <div class="container">
-
+        <hr>
         <a href="/posts/create" class="btn btn-primary pull-right"> Criar Posts </a>
+        <hr>
         <div class="col-md-12">
             {% include 'includes/messages.html.twig' %}
         </div>
@@ -10,6 +11,8 @@
             {% for p in posts %}
                 <div class="posts">
                     <h2><a href="/posts/edit/{{ p.id }}"> {{ p.title }} </a></h2>
+                    <small><a href="/posts/remove/{{ p.id }}" class="btn btn-danger btn-sm">Apagar</a></small>
+                    <br>
                     <small>Criado em {{ p.createdAt()|date("d/m/Y") }}</small>
                     <p>
                         {{ p.content }}
