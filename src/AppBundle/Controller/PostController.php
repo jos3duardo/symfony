@@ -13,13 +13,21 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PostController extends Controller
 {
-
     /**
      * @Route("/")
      * @return Response
      */
-    public function indexAction()
+    public function indexAction(){
+        return new Response("Teste Novo Controller Posts");
+    }
+
+    /**
+     * @Route("/post/{slug}")
+     * @return Response
+     */
+    public function singleAction($slug)
     {
-        return new Response("Teste novo controller posts");
+        $data = ['slug' => $slug];
+        return $this->render('posts/single.html.twig', $data);
     }
 }
