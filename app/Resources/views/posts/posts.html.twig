@@ -3,8 +3,10 @@
     <div class="container">
 
         <a href="/posts/create" class="btn btn-primary pull-right"> Criar Posts </a>
-
-        <div>
+        <div class="col-md-12">
+            {% include 'includes/messages.html.twig' %}
+        </div>
+        <div class="col-md-12">
             {% for p in posts %}
                 <div class="posts">
                     <h2><a href="/posts/edit/{{ p.id }}"> {{ p.title }} </a></h2>
